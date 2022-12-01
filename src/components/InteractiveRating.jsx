@@ -1,11 +1,13 @@
 import styled from "styled-components";
 import IRChoice from "./InteractiveRating-styled-components/IRChoice";
+import IRThanks from "./InteractiveRating-styled-components/IRThanks";
 
 
 function InteractiveRating() {
     return (
         <Main>
-            <IRChoice/>
+            {/* <IRChoice/> */}
+            <IRThanks />
         </Main>
     );
 }

@@ -27,20 +27,6 @@ export default IRChoice;
 /* ------------------------------Styles------------------------------ */
 
 const ChoiceSide = styled(Card)`
-
-  h1 {
-    margin: 30px 0 15px;
-    color: white;
-    font-weight: 400;
-    font-size: 1.7rem;
-  }
-
-  p {
-    margin: 10px 0;
-    color: hsl(217, 12%, 63%);
-    font-size: 0.9rem;
-  }
-  
   ol {
     list-style-type: none;
     display: flex;

@@ -12,6 +12,19 @@ const Card = styled.div`
       hsl(218, 29%, 16%) 70%
     );
 
+  h1 {
+    margin: 30px 0 15px;
+    color: white;
+    font-weight: 400;
+    font-size: 1.7rem;
+  }
+
+  p {
+    margin: 10px 0;
+    color: hsl(217, 12%, 63%);
+    font-size: 0.9rem;
+  }
+
   @media (max-width: 400px) {
     width: 345px;
     height: 370px;
