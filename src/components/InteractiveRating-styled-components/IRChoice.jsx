@@ -1,56 +1,6 @@
 import styled, {css} from "styled-components";
 import Card from "./IRCard";
 
-const ChoiceSide = styled(Card)`
-    ol {
-        list-style-type: none;
-        display: flex;
-        justify-content: space-between; 
-    }
-`;
-
-const Circle = css`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100px;
-    width: 45px;
-    height: 45px;
-    background-color: hsl(202, 20%, 22%);
-`;
-
-const CircularDiv = styled.div`
-    ${Circle};
-`; 
-
-const CircularLi = styled.li`
-    ${Circle};
-    margin: 10px 0 13px;
-    color: hsl(217, 12%, 63%);
-    font-weight: 700;
-    cursor: pointer;
-    transition: 0.5s ease-in-out;
-    
-    &:hover {
-    background-color: hsl(25, 97%, 53%);
-    color: white;
-}
-`;
-
-const Button = styled.button`
-    width: 100%;
-    padding: 12px;
-    border: none;
-    border-radius: 100px;
-    font-weight: 700;
-    background-color: hsl(25, 97%, 53%);
-    color: white;
-    letter-spacing: 0.3rem;
-    cursor: pointer;
-    transition: 0.5s ease-in-out;
-`;
-
-
 
 function IRChoice() {
     return(
@@ -73,3 +23,87 @@ function IRChoice() {
 }
 
 export default IRChoice;
+
+/* ------------------------------Styles------------------------------ */
+
+const ChoiceSide = styled(Card)`
+
+  h1 {
+    margin: 30px 0 15px;
+    color: white;
+    font-weight: 400;
+    font-size: 1.7rem;
+  }
+
+  p {
+    margin: 10px 0;
+    color: hsl(217, 12%, 63%);
+    font-size: 0.9rem;
+  }
+  
+  ol {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (max-width: 400px) {
+    div, li  {
+        width: 40px;
+        height: 40px;
+    }
+
+    h1 {
+        margin-top: 20px;
+    }
+
+    button {
+        padding: 14px;
+    }
+`;
+
+const Circle = css`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  width: 45px;
+  height: 45px;
+  background-color: hsl(202, 20%, 22%);
+`;
+
+const CircularDiv = styled.div`
+  ${Circle};
+`; 
+
+const CircularLi = styled.li`
+  ${Circle};
+  margin: 10px 0 13px;
+  color: hsl(217, 12%, 63%);
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+
+  &:hover {
+    background-color: hsl(25, 97%, 53%);
+    color: white;
+  }
+`;
+
+const Button = styled.button`
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 100px;
+  font-weight: 700;
+  background-color: hsl(25, 97%, 53%);
+  color: white;
+  letter-spacing: 0.3rem;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+
+  &:hover {
+    background-color: white;
+    color: hsl(25, 97%, 53%);
+  }
+`;

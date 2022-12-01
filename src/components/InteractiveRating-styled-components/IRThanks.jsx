@@ -1,12 +1,6 @@
 import styled from "styled-components";
 import Card from "./IRCard";
 
-const ThanksSide = styled(Card)`
-
-`;
-
-
-
 
 function IRThanks() {
     return(
@@ -15,3 +9,11 @@ function IRThanks() {
         </ThanksSide>
     );
 }
+
+/* ------------------------------Styles------------------------------ */
+
+const ThanksSide = styled(Card)`
+
+`;
+
+
