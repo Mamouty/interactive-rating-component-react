@@ -6,8 +6,8 @@ import IRThanks from "./InteractiveRating-styled-components/IRThanks";
 function InteractiveRating() {
     return (
         <Main>
-            {/* <IRChoice/> */}
-            <IRThanks />
+            <IRChoice/>
+            {/* <IRThanks /> */}
         </Main>
     );
 }

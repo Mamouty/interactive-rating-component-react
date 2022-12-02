@@ -1,8 +1,23 @@
 import styled, {css} from "styled-components";
 import Card from "./IRCard";
 
+function CreateList(props) {
+    const choose = (e, key) => {
+        console.log(e);
+        console.log(key);
+    }
+
+    return(
+        <CircularLi onClick={event => choose(event, props.key)}>{props.value}</CircularLi>
+    );
+};
 
 function IRChoice() {
+    const list = [1, 2, 3, 4, 5];
+    const listItems = list.map((number) => 
+        <CreateList key={number.toString()} id={number.toString()} value={number} />
+    );
+
     return(
         <ChoiceSide>
             <CircularDiv>
@@ -11,11 +26,7 @@ function IRChoice() {
             <h1>How did we do?</h1>
             <p>Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
             <ol>
-                <CircularLi>1</CircularLi>
-                <CircularLi>2</CircularLi>
-                <CircularLi>3</CircularLi>
-                <CircularLi>4</CircularLi>
-                <CircularLi>5</CircularLi>
+                {listItems}
             </ol>
             <Button>SUBMIT</Button>
         </ChoiceSide>
