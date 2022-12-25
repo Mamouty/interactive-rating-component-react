@@ -1,20 +1,24 @@
+import React, { useState } from "react";
 import styled, {css} from "styled-components";
 import Card from "./IRCard";
 
 function CreateList(props) {
-    const choose = (e, key) => {
+    const [active, setActive] = useState("");
+
+    const handleClick = (e, number) => {
         console.log(e);
-        console.log(key);
+        console.log(number);
+        setActive("white");
     }
 
     return(
-        <CircularLi onClick={event => choose(event, props.key)}>{props.value}</CircularLi>
+        <CircularLi onClick={event => handleClick(event, props.id)} >{props.value}</CircularLi>
     );
-};
+}
 
 function IRChoice() {
     const list = [1, 2, 3, 4, 5];
-    const listItems = list.map((number) => 
+    const listItems = list.map((number) =>
         <CreateList key={number.toString()} id={number.toString()} value={number} />
     );
 
@@ -76,10 +80,11 @@ const CircularDiv = styled.div`
 const CircularLi = styled.li`
   ${Circle};
   margin: 10px 0 13px;
-  color: hsl(217, 12%, 63%);
+  color: ${props => props.white ? "white" : "gray"};
   font-weight: 700;
   cursor: pointer;
   transition: 0.5s ease-in-out;
+
 
   &:hover {
     background-color: hsl(25, 97%, 53%);
