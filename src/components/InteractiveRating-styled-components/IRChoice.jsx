@@ -10,7 +10,9 @@ function RatingList(props) {
             id={number.toString()}
             $color={props.active === number}
             onClick={event => props.onShow(event, number)}
-        >{number}</CircularLi>
+        >
+            {number}
+        </CircularLi>
     );
 
     return(
@@ -20,7 +22,7 @@ function RatingList(props) {
     );
 }
 
-function IRChoice() {
+function IRChoice(props) {
     const [isActive, setIsActive] = useState(0);
 
     const handleShow = (e, number) => {
@@ -35,7 +37,7 @@ function IRChoice() {
             <h1>How did we do?</h1>
             <p>Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
             <RatingList active={isActive} onShow={handleShow}/>
-            <Button>SUBMIT</Button>
+            <Button onClick={event => props.onRender(event, isActive)}>SUBMIT</Button>
         </ChoiceSide>
     );
 }
