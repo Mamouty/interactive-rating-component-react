@@ -15,7 +15,7 @@ function InteractiveRating() {
 
     return (
         <Main>
-            {isRated === 0 ? <IRChoice rating={isRated} onRender={handleRender}/> : <IRThanks rating={isRated}/>}
+            {isRated === 0 ? <IRChoice onRender={handleRender}/> : <IRThanks rating={isRated}/>}
         </Main>
     );
 }
@@ -30,5 +30,4 @@ const Main = styled.main`
     display: flex;
     justify-content: center;
     align-items: center;
-    perspective: 1000px;
 `;
